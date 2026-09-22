@@ -270,7 +270,7 @@ export default function Home() {
       {/* Popular */}
       <section className="relative z-10 pb-28">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="relative overflow-hidden rounded-[36px] border border-white/10 bg-gradient-to-br from-white/[0.075] via-white/[0.035] to-transparent p-8 shadow-[0_30px_100px_rgba(0,0,0,0.35)] backdrop-blur-2xl sm:p-10">
+          <div className="scroll-float-3d relative overflow-hidden rounded-[36px] border border-white/10 bg-gradient-to-br from-white/[0.075] via-white/[0.035] to-transparent p-8 shadow-[0_30px_100px_rgba(0,0,0,0.35)] backdrop-blur-2xl sm:p-10">
             <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue-500/10 blur-[100px]" />
 
             <div className="relative flex flex-col justify-between gap-8 sm:flex-row sm:items-end">
@@ -283,7 +283,7 @@ export default function Home() {
                   Popüler hesaplamalar
                 </h2>
 
-                <p className="mt-3 text-sm text-white/35">
+                <p className="scroll-3d mt-3 text-sm text-white/35">
                   En çok ihtiyaç duyulan araçlara hızlıca ulaşın.
                 </p>
               </div>
