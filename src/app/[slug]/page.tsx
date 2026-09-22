@@ -21,10 +21,17 @@ export async function generateMetadata({
     return {};
   }
 
+  const canonicalUrl =
+    "https://hesaplama-sitesi-ebon.vercel.app/" +
+    calculator.slug;
+
   return {
     title: calculator.seo?.title ?? calculator.title,
     description:
       calculator.seo?.description ?? calculator.shortDescription,
+    alternates: {
+      canonical: canonicalUrl,
+    },
   };
 }
 
@@ -71,7 +78,8 @@ export default async function CalculatorPage({
           <p>{howItWorks}</p>
         </section>
       )}
-{faq && faq.length > 0 && (
+
+      {faq && faq.length > 0 && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -90,7 +98,7 @@ export default async function CalculatorPage({
           }}
         />
       )}
-      
+
       {faq && faq.length > 0 && (
         <section>
           <h2>Sık Sorulan Sorular</h2>
@@ -103,7 +111,8 @@ export default async function CalculatorPage({
           ))}
         </section>
       )}
-       {calculator.relatedCalculators &&
+
+      {calculator.relatedCalculators &&
         calculator.relatedCalculators.length > 0 && (
           <section>
             <h2>İlgili Hesaplamalar</h2>
