@@ -1,7 +1,5 @@
-```tsx id="k8xwq4"
+```tsx id="jv2g3m"
 import type { MetadataRoute } from "next";
-
-const baseUrl = "https://hesaplama-sitesi-ebon.vercel.app";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -9,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: "https://hesaplama-sitesi-ebon.vercel.app/sitemap.xml",
   };
 }
 ```
