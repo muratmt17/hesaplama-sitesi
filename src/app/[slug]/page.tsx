@@ -103,6 +103,30 @@ export default async function CalculatorPage({
           ))}
         </section>
       )}
+       {calculator.relatedCalculators &&
+        calculator.relatedCalculators.length > 0 && (
+          <section>
+            <h2>İlgili Hesaplamalar</h2>
+
+            <ul>
+              {calculator.relatedCalculators.map((relatedSlug) => {
+                const relatedCalculator = calculatorMap.get(relatedSlug);
+
+                if (!relatedCalculator) {
+                  return null;
+                }
+
+                return (
+                  <li key={relatedSlug}>
+                    <a href={"/" + relatedSlug}>
+                      {relatedCalculator.title}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        )}
     </main>
   );
 }
