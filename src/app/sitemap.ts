@@ -6,7 +6,7 @@ const baseUrl = "https://hesaplama-sitesi-ebon.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const categoryUrls: MetadataRoute.Sitemap = categories.map((category) => ({
-    url: baseUrl + "/" + category.slug,
+    url: baseUrl + "/kategori/" + category.slug,
     changeFrequency: "weekly",
     priority: 0.8,
   }));
