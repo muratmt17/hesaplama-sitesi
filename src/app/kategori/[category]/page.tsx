@@ -1,7 +1,26 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { categories } from "@/data/categories";
 import { calculators } from "@/calculators/registry";
+export async function generateMetadata({
+  params,
+}: CategoryPageProps): Promise<Metadata> {
+  const { category: categorySlug } = await params;
+
+  const category = categories.find(
+    (item) => item.slug === categorySlug
+  );
+
+  if (!category) {
+    return {};
+  }
+
+  return {
+    title: category.title,
+    description: category.description,
+  };
+}
 
 interface CategoryPageProps {
   params: Promise<{
