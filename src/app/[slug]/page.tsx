@@ -71,7 +71,26 @@ export default async function CalculatorPage({
           <p>{howItWorks}</p>
         </section>
       )}
-
+{faq && faq.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faq.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: item.answer,
+                },
+              })),
+            }),
+          }}
+        />
+      )}
+      
       {faq && faq.length > 0 && (
         <section>
           <h2>Sık Sorulan Sorular</h2>
