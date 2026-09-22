@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { calculatorMap } from "@/calculators/registry";
+import { getCustomSeoContent } from "@/calculators/seo-content";
 
 import CalculatorForm from "@/components/calculator/CalculatorForm";
 
@@ -34,6 +35,7 @@ export default async function CalculatorPage({
   const { slug } = await params;
 
   const calculator = calculatorMap.get(slug);
+  const customContent = getCustomSeoContent(slug);
 
   if (!calculator) {
     notFound();
