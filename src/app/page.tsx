@@ -205,7 +205,7 @@ export default function Home() {
                 Keşfet
               </div>
 
-              <h2 className="text-3xl font-black tracking-tight sm:text-4xl">
+              <h2 className="scroll-title-3d text-3xl font-black tracking-tight sm:text-4xl">
                 Hesaplama dünyası
               </h2>
 
@@ -225,7 +225,7 @@ export default function Home() {
               <Link
                 key={category.slug}
                 href={`/kategori/${category.slug}`}
-                className="group relative min-h-[235px] overflow-hidden rounded-[30px] border border-white/[0.09] bg-gradient-to-br from-white/[0.065] to-white/[0.018] p-7 shadow-[0_20px_70px_rgba(0,0,0,0.2)] backdrop-blur-xl transition duration-500 hover:-translate-y-3 hover:scale-[1.015] hover:border-cyan-300/25 hover:shadow-[0_35px_90px_rgba(0,0,0,0.4)]"
+                className="scroll-3d group relative min-h-[235px] overflow-hidden rounded-[30px] border border-white/[0.09] bg-gradient-to-br from-white/[0.065] to-white/[0.018] p-7 shadow-[0_20px_70px_rgba(0,0,0,0.2)] backdrop-blur-xl transition duration-500 hover:-translate-y-3 hover:scale-[1.015] hover:border-cyan-300/25 hover:shadow-[0_35px_90px_rgba(0,0,0,0.4)]"
               >
                 <div className="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-cyan-400/0 blur-[70px] transition duration-700 group-hover:bg-cyan-400/10" />
 
