@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { calculatorMap } from "@/calculators/registry";
 import { getCustomSeoContent } from "@/calculators/seo-content";
-
 import CalculatorForm from "@/components/calculator/CalculatorForm";
 
 interface CalculatorPageProps {
@@ -35,11 +34,21 @@ export default async function CalculatorPage({
   const { slug } = await params;
 
   const calculator = calculatorMap.get(slug);
-  const customContent = getCustomSeoContent(slug);
 
   if (!calculator) {
     notFound();
   }
+
+  const customContent = getCustomSeoContent(slug);
+
+  const description =
+    customContent.description ?? calculator.description;
+
+  const howItWorks =
+    customContent.howItWorks ?? calculator.howItWorks;
+
+  const faq =
+    customContent.faq ?? calculator.faq;
 
   return (
     <main>
@@ -49,25 +58,25 @@ export default async function CalculatorPage({
 
       <CalculatorForm slug={slug} />
 
-      {calculator.description && (
+      {description && (
         <section>
           <h2>Hakkında</h2>
-          <p>{calculator.description}</p>
+          <p>{description}</p>
         </section>
       )}
 
-      {calculator.howItWorks && (
+      {howItWorks && (
         <section>
           <h2>Nasıl Hesaplanır?</h2>
-          <p>{calculator.howItWorks}</p>
+          <p>{howItWorks}</p>
         </section>
       )}
 
-      {calculator.faq && calculator.faq.length > 0 && (
+      {faq && faq.length > 0 && (
         <section>
           <h2>Sık Sorulan Sorular</h2>
 
-          {calculator.faq.map((item) => (
+          {faq.map((item) => (
             <div key={item.question}>
               <h3>{item.question}</h3>
               <p>{item.answer}</p>
