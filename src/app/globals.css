@@ -24,3 +24,103 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* =========================================
+   PREMIUM SCROLL 3D EFFECTS
+   ========================================= */
+
+@keyframes scrollReveal3D {
+  0% {
+    opacity: 0;
+    transform: perspective(1200px) translateY(90px) scale(0.82)
+      rotateX(14deg);
+    filter: blur(8px);
+  }
+
+  45% {
+    opacity: 0.85;
+    transform: perspective(1200px) translateY(20px) scale(0.96)
+      rotateX(4deg);
+    filter: blur(1px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: perspective(1200px) translateY(0) scale(1)
+      rotateX(0deg);
+    filter: blur(0);
+  }
+}
+
+@keyframes scrollTitle3D {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) translateY(70px) scale(0.72)
+      rotateX(18deg);
+    letter-spacing: 0.08em;
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: perspective(1000px) translateY(15px) scale(0.94)
+      rotateX(4deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) translateY(0) scale(1)
+      rotateX(0deg);
+    letter-spacing: normal;
+  }
+}
+
+@keyframes scrollFloat3D {
+  0% {
+    opacity: 0;
+    transform: perspective(1200px) translateY(100px)
+      rotateX(16deg) rotateY(-5deg) scale(0.78);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: perspective(1200px) translateY(20px)
+      rotateX(5deg) rotateY(2deg) scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: perspective(1200px) translateY(0)
+      rotateX(0deg) rotateY(0deg) scale(1);
+  }
+}
+
+.scroll-3d {
+  animation: scrollReveal3D linear both;
+  animation-timeline: view();
+  animation-range: entry 5% cover 35%;
+  transform-origin: center bottom;
+  will-change: transform, opacity, filter;
+}
+
+.scroll-title-3d {
+  animation: scrollTitle3D linear both;
+  animation-timeline: view();
+  animation-range: entry 5% cover 38%;
+  transform-origin: center bottom;
+  will-change: transform, opacity;
+}
+
+.scroll-float-3d {
+  animation: scrollFloat3D linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 38%;
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-3d,
+  .scroll-title-3d,
+  .scroll-float-3d {
+    animation: none;
+  }
+}
