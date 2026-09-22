@@ -220,6 +220,125 @@ const customSeoContent: Record<string, SeoContent> = {
       },
     ],
   },
+  "kredi-hesaplama": {
+    description:
+      "Kredi hesaplama aracı ile kredi tutarı, faiz oranı ve vade bilgilerini kullanarak aylık ödeme ve toplam geri ödeme tutarını hesaplayabilirsiniz.",
+    howItWorks:
+      "Kredi hesaplamasında kredi tutarı, faiz oranı ve vade birlikte değerlendirilir. Aylık ödeme tutarı kredi koşullarına göre hesaplanır ve toplam geri ödeme vade boyunca yapılacak ödemeler üzerinden belirlenir.",
+    faq: [
+      {
+        question: "Kredi hesaplama nasıl yapılır?",
+        answer:
+          "Kredi tutarı, faiz oranı ve vade bilgileri kullanılarak aylık taksit ve toplam geri ödeme hesaplanır.",
+      },
+      {
+        question: "Kredi vadesi arttıkça toplam geri ödeme neden değişir?",
+        answer:
+          "Vade uzadığında faiz daha uzun süre uygulandığı için toplam geri ödeme tutarı değişebilir.",
+      },
+      {
+        question: "Kredi hesaplamasında hangi bilgiler gerekir?",
+        answer:
+          "Genellikle kredi tutarı, faiz oranı ve vade bilgileri gerekir. Bankaya göre ek ücret ve masraflar da bulunabilir.",
+      },
+    ],
+  },
+
+  "mevduat-faizi-hesaplama": {
+    description:
+      "Mevduat faizi hesaplama aracı ile yatırılan para, faiz oranı ve vade bilgilerine göre elde edilebilecek yaklaşık faiz getirisini hesaplayabilirsiniz.",
+    howItWorks:
+      "Mevduat getirisi; anapara, faiz oranı ve vade kullanılarak hesaplanır. Vergi veya diğer kesintiler varsa net getiri hesaplanırken bunların da dikkate alınması gerekir.",
+    faq: [
+      {
+        question: "Mevduat faizi nasıl hesaplanır?",
+        answer:
+          "Mevduat getirisi anapara, faiz oranı ve vade bilgilerine göre hesaplanır.",
+      },
+      {
+        question: "100.000 TL mevduat ne kadar faiz getirir?",
+        answer:
+          "Getiri tutarı faiz oranı, vade ve varsa vergi kesintilerine göre değişir.",
+      },
+      {
+        question: "Mevduat faizinde net getiri nedir?",
+        answer:
+          "Net getiri, hesaplanan brüt faiz kazancından uygulanması gereken vergi ve kesintiler düşüldükten sonra kalan tutardır.",
+      },
+    ],
+  },
+
+  "enflasyon-hesaplama": {
+    description:
+      "Enflasyon hesaplama aracı ile belirli bir dönemde fiyatların ne kadar değiştiğini ve paranın satın alma gücündeki değişimi hesaplamaya yardımcı olabilirsiniz.",
+    howItWorks:
+      "Enflasyon hesaplamasında başlangıç ve dönem sonu fiyatları karşılaştırılır. Fiyatlardaki değişim yüzde olarak ifade edilerek belirli bir dönemdeki artış hesaplanabilir.",
+    faq: [
+      {
+        question: "Enflasyon nasıl hesaplanır?",
+        answer:
+          "Belirli bir dönemdeki fiyat değişimi başlangıç ve son değerler karşılaştırılarak yüzde olarak hesaplanabilir.",
+      },
+      {
+        question: "Enflasyon paranın değerini nasıl etkiler?",
+        answer:
+          "Fiyatlar arttıkça aynı miktardaki parayla satın alınabilen mal ve hizmet miktarı azalabilir.",
+      },
+      {
+        question: "Enflasyon hesaplama ne işe yarar?",
+        answer:
+          "Farklı dönemlerdeki fiyat değişimlerini ve paranın satın alma gücündeki değişimi anlamaya yardımcı olabilir.",
+      },
+    ],
+  },
+
+  "net-maas-hesaplama": {
+    description:
+      "Net maaş hesaplama aracı ile brüt maaş üzerinden tahmini net maaşı ve maaştan yapılabilecek kesintileri hesaplamaya yardımcı olabilirsiniz.",
+    howItWorks:
+      "Net maaş hesaplamasında brüt ücret üzerinden uygulanabilecek sigorta primi, vergi ve diğer yasal kesintiler dikkate alınır. Kesintiler düşüldükten sonra çalışanın eline geçen tutar hesaplanır.",
+    faq: [
+      {
+        question: "Net maaş nasıl hesaplanır?",
+        answer:
+          "Brüt maaştan uygulanması gereken yasal kesintiler düşülerek net maaş hesaplanır.",
+      },
+      {
+        question: "Brüt maaş ile net maaş arasındaki fark nedir?",
+        answer:
+          "Brüt maaş kesintiler uygulanmadan önceki ücret, net maaş ise kesintiler sonrasında çalışanın eline geçen tutardır.",
+      },
+      {
+        question: "Net maaş neden aylar arasında değişebilir?",
+        answer:
+          "Vergi dilimi, primler, istisnalar ve diğer yasal düzenlemeler nedeniyle çalışanın net maaşı dönemlere göre değişebilir.",
+      },
+    ],
+  },
+
+  "kira-artis-hesaplama": {
+    description:
+      "Kira artış hesaplama aracı ile mevcut kira bedeline uygulanabilecek artış oranına göre yeni kira tutarını hesaplayabilirsiniz.",
+    howItWorks:
+      "Kira artış hesaplamasında mevcut kira bedeli ve uygulanacak artış oranı kullanılır. Artış tutarı hesaplandıktan sonra mevcut kiraya eklenerek yeni kira bedeli bulunur.",
+    faq: [
+      {
+        question: "Kira artışı nasıl hesaplanır?",
+        answer:
+          "Mevcut kira bedelinin belirlenen artış oranı hesaplanır ve bulunan artış tutarı mevcut kiraya eklenir.",
+      },
+      {
+        question: "Kira artışından sonra yeni kira nasıl bulunur?",
+        answer:
+          "Mevcut kira ile kira artış tutarı toplanarak yeni kira bedeli hesaplanır.",
+      },
+      {
+        question: "Kira artış oranı nereden belirlenir?",
+        answer:
+          "Uygulanabilecek oran dönemsel mevzuat ve yürürlükteki kurallara göre değişebileceğinden güncel düzenlemelerin ayrıca kontrol edilmesi gerekir.",
+      },
+    ],
+  },
 };
 
 export function getCustomSeoContent(slug: string): SeoContent {
