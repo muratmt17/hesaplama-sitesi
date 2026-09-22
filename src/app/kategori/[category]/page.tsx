@@ -3,6 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { categories } from "@/data/categories";
 import { calculators } from "@/calculators/registry";
+
+interface CategoryPageProps {
+  params: Promise<{
+    category: string;
+  }>;
+}
+
 export async function generateMetadata({
   params,
 }: CategoryPageProps): Promise<Metadata> {
