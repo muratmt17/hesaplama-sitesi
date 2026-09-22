@@ -90,7 +90,7 @@ export default function Home() {
               </span>
             </h1>
 
-            <p className="mt-7 max-w-xl text-base leading-7 text-white/45 sm:text-lg">
+            <p className="scroll-3d mt-7 max-w-xl text-base leading-7 text-white/45 sm:text-lg">
               Yüzdeden krediye, maaştan yakıta kadar ihtiyacınız olan
               hesaplamaları tek bir platformda keşfedin.
             </p>
