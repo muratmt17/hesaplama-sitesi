@@ -9,4 +9,4 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: "https://hesaplama-sitesi-ebon.vercel.app/sitemap.xml",
   };
 }
-```
+
