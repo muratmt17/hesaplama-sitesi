@@ -16,16 +16,17 @@ export async function generateMetadata({
     return {};
   }
 
+  const canonicalUrl =
+    "https://hesaplama-sitesi-ebon.vercel.app/kategori/" +
+    category.slug;
+
   return {
     title: category.title,
     description: category.description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
   };
-}
-
-interface CategoryPageProps {
-  params: Promise<{
-    category: string;
-  }>;
 }
 
 export default async function CategoryPage({
