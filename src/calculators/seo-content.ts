@@ -105,6 +105,121 @@ const customSeoContent: Record<string, SeoContent> = {
       },
     ],
   },
+
+  "kdv-hesaplama": {
+    description:
+      "KDV hesaplama aracı ile KDV tutarını, KDV dahil fiyatı veya KDV hariç fiyatı kolayca hesaplayabilirsiniz.",
+    howItWorks:
+      "KDV tutarı, KDV hariç fiyatın KDV oranıyla çarpılmasıyla hesaplanır. KDV dahil fiyat ise KDV hariç tutara KDV eklenerek bulunur.",
+    faq: [
+      {
+        question: "KDV nasıl hesaplanır?",
+        answer:
+          "KDV tutarı, KDV hariç fiyat ile KDV oranının çarpılmasıyla hesaplanır.",
+      },
+      {
+        question: "KDV dahil fiyattan KDV hariç fiyat nasıl bulunur?",
+        answer:
+          "KDV dahil fiyat, kullanılan KDV oranına göre ilgili katsayıya bölünerek KDV hariç tutar hesaplanabilir.",
+      },
+      {
+        question: "KDV hesaplama ne için kullanılır?",
+        answer:
+          "Ürün ve hizmetlerin vergi dahil veya vergi hariç fiyatlarını hesaplamak için kullanılabilir.",
+      },
+    ],
+  },
+
+  "zam-hesaplama": {
+    description:
+      "Zam hesaplama aracı ile maaş, fiyat veya herhangi bir tutara uygulanan zam oranını ve zamlı yeni değeri hızlıca hesaplayabilirsiniz.",
+    howItWorks:
+      "Zam tutarı, mevcut değerin zam yüzdesiyle çarpılıp 100'e bölünmesiyle bulunur. Zamlı değer ise mevcut değere zam tutarının eklenmesiyle hesaplanır.",
+    faq: [
+      {
+        question: "Zamlı fiyat nasıl hesaplanır?",
+        answer:
+          "Mevcut tutarın zam oranı hesaplanır ve bulunan zam tutarı mevcut değere eklenir.",
+      },
+      {
+        question: "10.000 TL'ye %20 zam gelirse kaç TL olur?",
+        answer:
+          "10.000 TL'nin %20'si 2.000 TL'dir. Zamlı tutar 12.000 TL olur.",
+      },
+      {
+        question: "Maaş zammı nasıl hesaplanır?",
+        answer:
+          "Mevcut maaş, zam oranıyla hesaplanarak zam tutarı bulunur ve mevcut maaşa eklenir.",
+      },
+    ],
+  },
+
+  "kar-hesaplama": {
+    description:
+      "Kâr hesaplama aracı ile alış maliyeti ve satış fiyatı üzerinden elde edilen kâr tutarını ve kâr oranını kolayca hesaplayabilirsiniz.",
+    howItWorks:
+      "Kâr tutarı, satış fiyatından maliyet fiyatının çıkarılmasıyla bulunur. Kâr oranı ise elde edilen kârın maliyete oranlanmasıyla hesaplanabilir.",
+    faq: [
+      {
+        question: "Kâr nasıl hesaplanır?",
+        answer:
+          "Satış fiyatından maliyet fiyatı çıkarılarak kâr tutarı bulunur.",
+      },
+      {
+        question: "100 TL'ye alınan ürün 150 TL'ye satılırsa kâr ne kadar olur?",
+        answer:
+          "Kâr tutarı 150 TL - 100 TL işlemiyle 50 TL olur.",
+      },
+      {
+        question: "Kâr oranı nasıl hesaplanır?",
+        answer:
+          "Kâr tutarı maliyet fiyatına oranlanarak yüzde olarak kâr oranı hesaplanabilir.",
+      },
+    ],
+  },
+
+  "kar-marji-hesaplama": {
+    description:
+      "Kâr marjı hesaplama aracı ile satış fiyatı ve maliyet üzerinden kâr marjınızı yüzde olarak hızlıca hesaplayabilirsiniz.",
+    howItWorks:
+      "Kâr marjı, satış fiyatından maliyet çıkarılarak bulunan kârın satış fiyatına bölünmesi ve 100 ile çarpılmasıyla hesaplanır.",
+    faq: [
+      {
+        question: "Kâr marjı nasıl hesaplanır?",
+        answer:
+          "Kâr tutarı satış fiyatına bölünür ve sonuç 100 ile çarpılarak yüzde kâr marjı bulunur.",
+      },
+      {
+        question: "Kâr ile kâr marjı arasındaki fark nedir?",
+        answer:
+          "Kâr, elde edilen parasal kazarı ifade ederken kâr marjı bu kazancın satış fiyatına oranını yüzde olarak gösterir.",
+      },
+    ],
+  },
+
+  "kredi-taksit-hesaplama": {
+    description:
+      "Kredi taksit hesaplama aracı ile kredi tutarı, faiz oranı ve vade bilgilerine göre aylık taksit tutarını ve toplam geri ödemeyi hesaplayabilirsiniz.",
+    howItWorks:
+      "Kredi taksiti, kredi tutarı, faiz oranı ve vade kullanılarak hesaplanır. Aylık taksit tutarı belirlendikten sonra toplam geri ödeme taksit tutarı ile vadenin çarpılmasıyla bulunabilir.",
+    faq: [
+      {
+        question: "Kredi taksiti nasıl hesaplanır?",
+        answer:
+          "Kredi tutarı, faiz oranı ve vade bilgileri kullanılarak aylık ödeme tutarı hesaplanır.",
+      },
+      {
+        question: "Kredi vadesi uzarsa aylık taksit ne olur?",
+        answer:
+          "Diğer koşullar aynı kaldığında vadenin uzaması genellikle aylık taksit tutarını azaltırken toplam geri ödeme tutarını artırabilir.",
+      },
+      {
+        question: "Kredi toplam geri ödeme nasıl hesaplanır?",
+        answer:
+          "Aylık taksit tutarı ve toplam taksit sayısı dikkate alınarak hesaplanır. Banka masrafları ve diğer ücretler ayrıca değerlendirilebilir.",
+      },
+    ],
+  },
 };
 
 export function getCustomSeoContent(slug: string): SeoContent {
